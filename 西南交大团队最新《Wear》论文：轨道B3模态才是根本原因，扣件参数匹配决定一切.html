@@ -2,297 +2,59 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>🚄 高铁车轮“高阶多边形”十年谜题终破解！</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文献阅读总结目录</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
-            line-height: 1.8;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
             color: #333;
-            background: #f8f8f8;
-            max-width: 680px;
-            margin: 0 auto;
-            padding-bottom: 40px;
-        }
-        .header {
-            background: linear-gradient(135deg, #d32f2f, #b71c1c);
-            color: #fff;
-            padding: 40px 20px 30px;
-            text-align: center;
-            position: relative;
-        }
-        .header::after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            right: 0;
-            height: 20px;
-            background: #f8f8f8;
-            border-radius: 50% 50% 0 0;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #f9f9f9;
         }
         h1 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-        .subtitle {
-            font-size: 18px;
-            opacity: 0.95;
-            margin-bottom: 8px;
-        }
-        .meta {
-            font-size: 15px;
-            opacity: 0.85;
-        }
-        .article {
-            background: #fff;
-            margin: -20px 15px 20px;
-            border-radius: 16px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        .section {
-            padding: 28px 22px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        .section:last-child { border-bottom: none; }
-        h2 {
-            font-size: 22px;
-            color: #d32f2f;
-            margin-bottom: 18px;
-            position: relative;
-            padding-left: 12px;
-        }
-        h2::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 4px;
-            width: 6px;
-            height: 22px;
-            background: #d32f2f;
-            border-radius: 3px;
-        }
-        p, li {
-            font-size: 17px;
-            margin-bottom: 14px;
-        }
-        .highlight {
-            background: #fff9e6;
-            border-left: 5px solid #d32f2f;
-            padding: 16px 20px;
-            margin: 20px 0;
-            font-size: 17.5px;
-            line-height: 1.9;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 15px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px 10px;
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
             text-align: center;
         }
-        th {
-            background: #d32f2f;
-            color: #fff;
-            font-weight: 600;
+        .card-list {
+            list-style: none;
+            padding: 0;
         }
-        tr:nth-child(even) { background: #f9f9f9; }
-        .table-caption {
-            text-align: center;
-            font-size: 15px;
-            color: #666;
-            margin-bottom: 8px;
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+            transition: transform 0.2s;
         }
-        .conclusion {
-            background: linear-gradient(90deg, #fff, #fff9e6);
-            padding: 24px;
-            margin: 30px 15px;
-            border-radius: 12px;
-            border: 2px solid #d32f2f;
-            text-align: center;
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
-        .footer {
-            text-align: center;
-            padding: 30px 20px;
-            color: #999;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-        .footer a {
-            color: #d32f2f;
+        .card a {
+            display: block;
+            padding: 20px;
             text-decoration: none;
+            color: #0066cc;
+            font-weight: 500;
         }
-        @media (max-width: 480px) {
-            h1 { font-size: 24px; }
-            .section { padding: 22px 18px; }
+        .card a:hover {
+            color: #004499;
         }
     </style>
 </head>
 <body>
-
-    <!-- 公众号式头部 -->
-    <div class="header">
-        <h1>🚄 高铁车轮“高阶多边形”十年谜题终破解！</h1>
-        <p class="subtitle">西南交大团队最新《Wear》论文：轨道B3模态才是根本原因，扣件参数匹配决定一切</p>
-        <div class="meta">
-            作者：Grok总结（基于宋春元等2025年《Wear》论文）<br>
-            来源：《Wear》578-579卷（2025）<br>
-            发布时间：2025年6月
-        </div>
-    </div>
-
-    <div class="article">
-
-        <!-- 第一节 -->
-        <div class="section">
-            <h2>一、为什么中国高铁车轮“高阶多边形”这么严重？</h2>
-            <p>中国高铁独有的运行特点——<strong>高速度 + 长大恒速区段 + 长时间连续运营 + 无砟轨道为主</strong>——让车轮长期处于稳定而强烈的周期性激励之下。</p>
-            <p>自2014年起，高阶多边形（振动频率主要在500~650Hz，对应18~23阶）频发，不仅大幅增加轮对维护成本，更威胁行车安全。</p>
-            <p>过去十年，学术界提出四大形成机制（全部来自西南交大），却始终未达成共识。</p>
-            
-            <div class="table-caption">四大机制对比表</div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>机制</th>
-                        <th>核心观点</th>
-                        <th>主要争议</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>A</strong></td>
-                        <td>转向架部件振动（框架/轮对模态）</td>
-                        <td>无法解释相同车辆在不同轨道上PWP频率差异</td>
-                    </tr>
-                    <tr>
-                        <td><strong>B</strong></td>
-                        <td>摩擦自激振动（蠕滑力饱和）</td>
-                        <td>恒速运行时蠕滑力很难饱和，哈大线冰雪天气反而多边形较轻</td>
-                    </tr>
-                    <tr>
-                        <td><strong>C</strong></td>
-                        <td><strong>轨道B3模态（轮对间轨段三阶弯曲模态）共振</strong></td>
-                        <td><strong>本文最终证明的正确机制</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>D</strong></td>
-                        <td>B3模态 + 显著频率偏移（55~95Hz）</td>
-                        <td>模拟与实测偏差过大，无法解释共振现象</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- 第二节 -->
-        <div class="section">
-            <h2>二、铁证如山：B3模态就是“罪魁祸首”</h2>
-            <p>西南交大团队通过<strong>车辆跟踪试验 + 轨道模态试验 + 动力学仿真</strong>三管齐下，彻底证明：</p>
-            <ol>
-                <li><strong>B3模态频率与车轮多边形通过频率（PWP频率）高度一致</strong>（偏差＜5.8%，多数＜2.8%），<strong>无显著频率偏移</strong>。</li>
-                <li><strong>扣件系统参数匹配（铁垫板质量、上/下橡胶垫刚度）是调节B3模态的关键</strong>。</li>
-                <li>CRTS-I ST（WJ-7扣件）→ B3 ≈ 640Hz → PWP ≈ 639Hz<br>
-                    CRTS-I/II DBBT（WJ-8/W300-1）→ B3 ≈ 580Hz → PWP ≈ 580Hz</li>
-            </ol>
-            <p class="highlight">核心结论：<br>
-            “轨道B3模态振动是高阶车轮多边形的根本诱因，扣件参数匹配特性显著调控B3模态振动，优化参数匹配关系可有效抑制多边形发展。”</p>
-        </div>
-
-        <!-- 第三节 -->
-        <div class="section">
-            <h2>三、扣件到底有多重要？一张图看懂</h2>
-            <p>扣件不是简单的“弹簧”，而是<strong>双层弹性垫 + 铁垫板</strong>的动力吸振器（DVA）结构！</p>
-            <p>团队首次把真实扣件（W300-1、WJ-8、WJ-7）的质量、刚度、阻尼全部测出来，建立了<strong>双层扣件精细模型</strong>（此前多数研究用单层简化模型，误差巨大）。</p>
-            
-            <div class="table-caption">优化高频吸振扣件参数对比（表8）</div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>扣件</th>
-                        <th>m (kg)</th>
-                        <th>k_up (MN/m)</th>
-                        <th>k_lo (MN/m)</th>
-                        <th>DVA频率 (Hz)</th>
-                        <th>B3频率 (Hz)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>WJ-8</td>
-                        <td>6.8</td>
-                        <td>350</td>
-                        <td>35</td>
-                        <td>1197.6</td>
-                        <td>582.5~588.7</td>
-                    </tr>
-                    <tr>
-                        <td>WJ-7</td>
-                        <td>10.4</td>
-                        <td>55</td>
-                        <td>1000</td>
-                        <td>1603.0</td>
-                        <td>641.7~647.1</td>
-                    </tr>
-                    <tr style="background:#fff9e6; font-weight:700;">
-                        <td><strong>优化扣件</strong></td>
-                        <td>8</td>
-                        <td>63.6</td>
-                        <td>63.6</td>
-                        <td><strong>634.6</strong></td>
-                        <td>588.7~592.6</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p>优化方案：保持WJ-8总体刚度不变，调整铁垫板质量=8kg、上下垫刚度=63.6 MN/m，DVA频率精准调到B3频率附近。</p>
-        </div>
-
-        <!-- 第四节 -->
-        <div class="section">
-            <h2>四、工程意义：终于有可落地的解决方案了</h2>
-            <p>此前缓解措施（频繁镟轮、变速运行、加装动力吸振器）要么成本高，要么管理难。</p>
-            <p><strong>高频吸振扣件</strong>的优势：</p>
-            <ul>
-                <li>针对性强，直接抑制“罪魁祸首”B3模态</li>
-                <li>安装在轨道侧，无需改动车辆</li>
-                <li>结合现有扣件结构，改造成本可控</li>
-                <li>可与研磨子、轮轨廓形优化等措施协同，形成“全链条”防控体系</li>
-            </ul>
-            <p>仿真结果：多边形发展里程从26万公里延长至50万公里（正常工况）；轮扁工况下从13.5万公里延长至19.5万公里。</p>
-        </div>
-
-        <!-- 第五节 -->
-        <div class="section">
-            <h2>五、论文亮点总结（一图胜千言）</h2>
-            <ul>
-                <li>首次系统梳理四大机制全部争议点</li>
-                <li>首次用真实扣件参数实现B3频率与PWP频率<strong>近乎1:1映射</strong></li>
-                <li>首次通过多场景仿真+实测验证“无显著频率偏移”</li>
-                <li>首次提出基于DVA原理的高频吸振扣件设计原则</li>
-            </ul>
-            <div class="conclusion">
-                <strong>十年争论，至此尘埃落定。</strong><br>
-                轨道B3模态 + 扣件参数匹配 = 高阶多边形形成机制的最终答案
-            </div>
-        </div>
-
-    </div>
-
-    <!-- 结尾 -->
-    <div class="footer">
-        本文完整总结自西南交大宋春元等《Wear》2025年论文<br>
-        欢迎转发、收藏、用于科普/技术分享<br>
-        <a href="https://doi.org/10.1016/j.wear.2025.206209" target="_blank">🔗 原论文DOI（可免费查阅摘要）</a><br>
-        如需论文原文PDF或网页定制，请联系我～
-    </div>
-
+    <h1>📚 文献阅读总结</h1>
+    <ul class="card-list">
+        <li class="card">
+            <a href="西南交大团队最新《Wear》论文：轨道B3模态才是根本原因，扣件参数匹配决定一切.html">
+                西南交大团队最新《Wear》论文：轨道B3模态才是根本原因，扣件参数匹配决定一切
+            </a>
+        </li>
+    </ul>
 </body>
 </html>
